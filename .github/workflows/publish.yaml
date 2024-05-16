@@ -23,6 +23,7 @@ jobs:
       cosign-version: 2.2.4
       syft-version: 1.4.1
       oras-version: 1.1.0
+      release-tag: latest
       sign-image: true
       sbom: true
       gren: true
