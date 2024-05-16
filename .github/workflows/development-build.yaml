@@ -14,7 +14,7 @@ jobs:
 
   dev-release:
     name: development build and release
-    uses: ThoughtWorks-DPS/gha-tools-action/.github/workflows/job-container-dev-release.yaml@main
+    uses: ThoughtWorks-DPS/gha-tools-action/.github/workflows/job-container-dev-release.yaml@4baf5677df945981d15017f0ffed8acaba1c6d8f     # v0.2.1
     secrets:
       OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
     with:
