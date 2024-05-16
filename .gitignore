@@ -1,0 +1,5 @@
+.python-version
+cosign.key
+cosign.pub
+manifestid
+sbom.spdx
