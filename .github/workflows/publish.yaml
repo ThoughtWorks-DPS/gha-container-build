@@ -22,6 +22,5 @@ jobs:
       release-tag: latest
       sign-image: true
       sbom: true
-      gren: true
       release-message: New release ThoughtWorks-DPS/gha-container-builder
       before-publish: true
