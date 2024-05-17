@@ -1,4 +1,4 @@
-FROM twdps/gha-container-base-image:0.1.3
+FROM twdps/gha-container-base-image:0.2.0
 
 LABEL org.opencontainers.image.title="gha-container-builder" \
       org.opencontainers.image.description="Alpine-based github actions job container image" \
