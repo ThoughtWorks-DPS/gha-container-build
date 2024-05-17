@@ -1,4 +1,4 @@
-FROM twdps/gha-container-base-image:0.1.2
+FROM twdps/gha-container-base-image:0.1.3
 
 LABEL org.opencontainers.image.title="gha-container-builder" \
       org.opencontainers.image.description="Alpine-based github actions job container image" \
@@ -14,10 +14,10 @@ LABEL org.opencontainers.image.title="gha-container-builder" \
 ENV BATS_VERSION=1.11.0
 ENV HADOLINT_VERSION=2.12.0
 ENV SNYK_VERSION=1.1291.0
-ENV TRIVY_VERSION=0.50.4
-ENV GRYPE_VERSION=0.77.1
+ENV TRIVY_VERSION=0.51.1
+ENV GRYPE_VERSION=0.77.4
 ENV COSIGN_VERSION=2.2.4
-ENV SYFT_VERSION=1.3.0
+ENV SYFT_VERSION=1.4.1
 ENV ORAS_VERSION=1.1.0
 ENV GREN_VERSION=0.17.3
 
@@ -27,8 +27,7 @@ RUN sudo apk add --no-cache \
              npm==10.2.5-r0 && \
     sudo npm install -g \
              snyk@${SNYK_VERSION} \
-             bats@${BATS_VERSION} \
-             github-release-notes@${GREN_VERSION} && \
+             bats@${BATS_VERSION} && \
     sudo chown -R root:root /usr/local/lib/node_modules && \
     curl -LO https://github.com/sigstore/cosign/releases/download/v${COSIGN_VERSION}/cosign-linux-amd64 && \
     chmod +x cosign-linux-amd64 && sudo mv cosign-linux-amd64 /usr/local/bin/cosign && \
