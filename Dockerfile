@@ -12,7 +12,6 @@ LABEL org.opencontainers.image.title="gha-container-builder" \
       org.opencontainers.image.version="VERSION"
 
 ENV BATS_VERSION=1.11.0
-ENV CONFTEST_VERSION=0.52.0
 ENV HADOLINT_VERSION=2.12.0
 ENV SNYK_VERSION=1.1291.0
 ENV TRIVY_VERSION=0.50.4
