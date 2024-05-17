@@ -27,7 +27,7 @@
 
 @test "trivy version" {
   run bash -c "docker exec gha-container-builder-image trivy --version"
-  [[ "${output}" =~ "0.50" ]]
+  [[ "${output}" =~ "0.51" ]]
 }
 
 @test "grype version" {
@@ -42,15 +42,10 @@
 
 @test "syft version" {
   run bash -c "docker exec gha-container-builder-image syft version"
-  [[ "${output}" =~ "1.3" ]]
+  [[ "${output}" =~ "1.4" ]]
 }
 
 @test "oras version" {
   run bash -c "docker exec gha-container-builder-image oras version"
   [[ "${output}" =~ "1.1" ]]
-}
-
-@test "gren version" {
-  run bash -c "docker exec gha-container-builder-image gren --version"
-  [[ "${output}" =~ "0.17" ]]
 }
